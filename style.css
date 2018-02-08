@@ -1,0 +1,17 @@
+* {
+    background-image: url('./images/background.png')
+}
+
+nav {
+    text-align: center;
+}
+.navigation_menu li a{
+  float: right;
+  font-size: 15px;
+  font-family: "Arial";
+  line-height: 1.2; 
+  margin: 15px;
+  text-decoration: none;
+  color: rgb(60, 60, 60);
+  
+}
