@@ -1,17 +1,48 @@
-* {
-    background-image: url('./images/background.png')
+body {
+    margin: 35px 165px;
+    background-image: url('./images/background.png');
 }
 
-nav {
-    text-align: center;
+.navigation_menu {
+    float: right;
+    width: 545px;
+    padding: 14px;
 }
-.navigation_menu li a{
-  float: right;
-  font-size: 15px;
-  font-family: "Arial";
-  line-height: 1.2; 
-  margin: 15px;
-  text-decoration: none;
-  color: rgb(60, 60, 60);
-  
+
+.navigation_menu li {
+    display: inline;
+    padding: 9px;
+    font-family: "Arial";
+    font-size: 13px;
+}
+
+.navigation_menu li a {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+}
+
+.navigation_menu li a:hover {
+    color: #ae3b44;
+}
+
+.logo {
+    float: left;
+}
+
+.layouts_submenu_content {
+    background-color: #212121;
+    position: absolute;
+    min-width: 145px;
+    /* display: none; */
+}
+
+.layouts_submenu_content a {
+    padding: 12px 16px;
+    display: block;
+    color: #fff;
+
+}
+
+.layouts_submenu_dropdown:hover .layouts_submenu_content {
+    display: block;
 }
