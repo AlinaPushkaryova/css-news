@@ -13,6 +13,13 @@ body {
     overflow: auto;
 }
 
+.logo {
+    background-image: url('./images/logo.png');
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 55px;
+}
+
 nav {
     float: right;
 }
@@ -25,6 +32,7 @@ nav {
     display: inline;
     padding: 9px;
     font-size: 13px;
+    display: inline-block;
 }
 
 .navigation_menu li a {
@@ -36,6 +44,10 @@ nav {
     color: #ae3b44;
 }
 
+.menu_container {
+    border-top: 8px solid black;
+}
+
 .logo {
     float: left;
 }
@@ -43,29 +55,40 @@ nav {
 .layouts_submenu_content {
     background-color: #212121;
     position: absolute;
-    min-width: 145px;
+    max-width: 145px;
+    z-index: 100;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.layouts_submenu_content li {
+    padding: 5px;
+}
+
+.navigation_menu li:hover .layouts_submenu_content {
+    display: block;
+    max-height: 300px;
 }
 
 .navigation_menu .layouts_submenu_content a {
-    padding: 12px 16px;
+    padding: 9px 16px;
     display: block;
     color: #fff;
-
-}
-
-.layouts_submenu_dropdown:hover .layouts_submenu_content {
-    display: block;
 }
 
 main {
     clear: both;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .news {
     text-align: left;
     border-top: 8px solid black;
     position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 734px;
+    float: right;
 }
 
 .news .title {
@@ -108,22 +131,54 @@ main {
     padding-top: 6px;
 }
 
-.custom_menu a {
+.main_menu a {
+    display: block;
     text-decoration: none;
     color: rgb(60, 60, 60);
+    padding: 15px
 }
 
 .custom_menu li {
-    padding: 15px;
     border-bottom:  1px solid #e7e7e7;
-    padding-bottom: 10px;
 }
 
 .custom_menu li:active {
     background-color: #ae3b44;
+    color: #fff;
 }
 
 .custom_menu li a:hover {
     color: #ae3b44;
 }
 
+.main_menu li:hover .dropdown_submenu {
+    display: block;
+    max-height: 300px;
+}
+
+.dropdown_submenu li {
+    border-top:  1px solid #e7e7e7;
+    border-bottom: 0;
+}
+
+.dropdown_submenu, .dropdown_inner_submenu, .layouts_submenu_content  {
+    overflow: hidden;
+    max-height: 0;
+}
+
+.dropdown_submenu {
+    background-color: #f4f7f8;
+}
+
+.dropdown_inner_submenu {
+    background-color: #eaeaea;
+}
+
+.dropdown_inner_submenu li {
+    border-top:  1px solid #d6d6d6;
+}
+
+.dropdown_submenu li:hover .dropdown_inner_submenu  {
+    display: block;
+    max-height: 300px;
+}
