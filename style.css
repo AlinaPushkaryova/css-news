@@ -15,7 +15,11 @@ main {
 }
 
 .wrapper {
-    margin: 37px auto;
+    margin: 0 auto;
+}
+
+header {
+    margin: 40px auto 40px auto;
 }
 
 .header_wrapper {
@@ -95,12 +99,12 @@ main {
 
 .additional_menu_toggle:before {
     content: "";
-    right: 0;
+    right: -8px;
     position: absolute;
     border-width: 4px;
     border-style: solid;
     border-color: transparent transparent transparent black;
-    margin: 5px -8px 0 0;
+    margin: 5px 0 0;
 }
 
 .layouts_submenu_content li, .layouts_submenu_content_additional li {
@@ -181,6 +185,8 @@ main {
     border-bottom: 0;
     font-size: 12px;
     float: left;
+    top: 149px;
+    position: absolute;
 }
 
 .custom_menu h2 {
@@ -205,13 +211,13 @@ main {
     border-bottom: 1px solid #e7e7e7;
 }
 
-.custom_menu li:active {
-    background-color: #ae3b44;
-    color: #fff;
-}
-
 .custom_menu li a:hover {
     color: #ae3b44;
+}
+
+.custom_menu li a:active {
+    background-color: #ae3b44;
+    color: #fff;
 }
 
 .dropdown_submenu li {
@@ -426,4 +432,14 @@ footer a {
 
 .fifth_footer_menu li:hover {
     opacity: 0.5;
+}
+
+.triangle {
+    border-left: 5px #132452;
+    border-top: 3px transparent;
+    border-bottom: 3px transparent;
+}
+
+.smth:hover .triangle {
+    transform: rotate(90deg);
 }
